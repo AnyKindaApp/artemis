@@ -318,6 +318,7 @@ class VoyagesData$PaginationInput with EquatableMixin {
 class VoyagesDataArguments extends JsonSerializable with EquatableMixin {
   VoyagesDataArguments({@required this.input});
 
+  @override
   factory VoyagesDataArguments.fromJson(Map<String, dynamic> json) =>
       _$VoyagesDataArgumentsFromJson(json);
 
@@ -325,6 +326,7 @@ class VoyagesDataArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object> get props => [input];
+  @override
   Map<String, dynamic> toJson() => _$VoyagesDataArgumentsToJson(this);
 }
 

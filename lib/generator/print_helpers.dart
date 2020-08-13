@@ -210,6 +210,7 @@ Spec generateArgumentClassSpec(QueryDefinition definition) {
               ..type = refer('Map<String, dynamic>')
               ..name = 'json',
           ))
+          ..annotations.add(CodeExpression(Code('override')))
           ..body = Code('_\$${definition.className}ArgumentsFromJson(json)'),
       ))
       ..methods.add(Method(
@@ -217,6 +218,7 @@ Spec generateArgumentClassSpec(QueryDefinition definition) {
           ..name = 'toJson'
           ..lambda = true
           ..returns = refer('Map<String, dynamic>')
+          ..annotations.add(CodeExpression(Code('override')))
           ..body = Code('_\$${definition.className}ArgumentsToJson(this)'),
       ))
       ..fields.addAll(definition.inputs.map(

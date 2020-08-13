@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.1.1
+- Clean up some analyzer & linter warnings by including override annotation and removing unused import.
+- Fix a format issue where the library forwarded now ends in a new line so `flutter format` doesn't make any changes to generated files.
+
 ## 5.1.0
 - Add `.graphql.` to outputted files path, in a non-breaking change way: a
 "forwarder" file will be generated to make it retro-compatible when a
